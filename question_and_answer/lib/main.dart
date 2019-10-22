@@ -17,7 +17,7 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State {
   var questionIndex = 0;
 
-  void answerQuestion() {
+  void _answerQuestion() {
     setState(() {
       questionIndex = questionIndex + 1;
     });
@@ -46,7 +46,7 @@ class _MyAppState extends State {
             ),
             RaisedButton(
               child: Text('Answer 1'),
-              onPressed: answerQuestion,
+              onPressed: _answerQuestion,
             ),
             RaisedButton(
               child: Text('Answer 2'),
