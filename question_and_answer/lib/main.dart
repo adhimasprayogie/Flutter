@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import './question.dart';
+
 // void main() {
 //   runApp (MyApp());
 // }
@@ -15,13 +17,13 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State {
-  var questionIndex = 0;
+  var _questionIndex = 0;
 
   void _answerQuestion() {
     setState(() {
-      questionIndex = questionIndex + 1;
+      _questionIndex = _questionIndex + 1;
     });
-    print(questionIndex);
+    print(_questionIndex);
   }
 
   @override
@@ -40,9 +42,10 @@ class _MyAppState extends State {
         // body: Text('This is my default text!'),
         body: Column(
           children: [
-            Text(
+            // Text(
+            Question(
               // questions.elementAt(0),
-              questions[questionIndex],
+              questions[_questionIndex],
             ),
             RaisedButton(
               child: Text('Answer 1'),
